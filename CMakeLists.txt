@@ -8,7 +8,6 @@ add_definitions(-std=c++11 -Wall -Wextra -Wno-switch)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
-FIND_PACKAGE (Threads REQUIRED)
 
 find_package(catkin REQUIRED COMPONENTS
   roscpp
@@ -139,11 +138,6 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/navX-micro_ros_node.cpp)
 
-file(GLOB SOURCES
-	"*.h"
-	"*.cpp"
-)
-
 add_executable(navX
 	src/test.cpp 
 	src/AHRS.cpp
@@ -152,9 +146,8 @@ add_executable(navX
 	src/OffsetTracker.cpp
 	src/SerialIO.cpp
 	src/SerialPort.cpp
-	${SOURCES}
 )
-target_link_libraries(navX ${catkin_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(navX ${catkin_LIBRARIES})
 add_dependencies(navX navX-micro_ros_generate_messages_cpp)
 
 ## Rename C++ executable without prefix
