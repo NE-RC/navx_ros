@@ -1,6 +1,6 @@
 #include "ros/ros.h"
 #include "std_msgs/Float32.h"
-#include "../../navXTimeSync/AHRS.h"
+#include <AHRS.h>
 
 int main(int argc, char** argv){
 	ros::init(argc, argv, "test");
