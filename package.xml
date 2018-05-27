@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>navX-micro_ros</name>
+  <name>navx_ros</name>
   <version>0.0.0</version>
-  <description>The navX-micro_ros package</description>
+  <description>The navx_ros package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <!-- Example:  -->
