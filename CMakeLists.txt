@@ -21,7 +21,7 @@ include_directories(
 
 
 add_executable(navx_node
-	src/test.cpp
+	src/navx_node.cpp
 	navXTimeSync/AHRS.cpp
 	navXTimeSync/ContinuousAngleTracker.cpp
 	navXTimeSync/InertialDataIntegrator.cpp
