@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(navx_publisher)
+project(navx_ros)
 
 add_compile_options(-std=c++11)
 
@@ -11,6 +11,8 @@ find_package(catkin REQUIRED COMPONENTS
 ###########
 ## Build ##
 ###########
+
+catkin_package()
 
 include_directories(
   ${catkin_INCLUDE_DIRS}
@@ -25,5 +27,5 @@ set (NAVX_SRCS
 	navXTimeSync/SerialIO.cpp
 	navXTimeSync/SerialPort.cpp )
 
-add_executable(navx src/test.cpp ${NAVX_SRC})
-target_link_libraries(navx ${catkin_LIBRARIES})
+add_executable(navx_node src/test.cpp ${NAVX_SRC})
+target_link_libraries(navx_node ${catkin_LIBRARIES})
