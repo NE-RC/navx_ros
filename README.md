@@ -1,4 +1,8 @@
 # navx_ros
+
+Creates a ROS node that publishes to IMU.msg. <br />
+Based off of FRC Team 900's [repository](https://github.com/FRC900/navXTimeSync)
+
 ## Directions for installing
 
 1) Clone this project to your catkin's workspace src folder
