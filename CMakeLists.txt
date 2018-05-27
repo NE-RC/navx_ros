@@ -19,13 +19,14 @@ include_directories(
   navXTimeSync
 )
 
-set (NAVX_SRCS
+
+add_executable(navx_node
+	src/test.cpp
 	navXTimeSync/AHRS.cpp
 	navXTimeSync/ContinuousAngleTracker.cpp
 	navXTimeSync/InertialDataIntegrator.cpp
 	navXTimeSync/OffsetTracker.cpp
 	navXTimeSync/SerialIO.cpp
-	navXTimeSync/SerialPort.cpp )
-
-add_executable(navx_node src/test.cpp ${NAVX_SRC})
+	navXTimeSync/SerialPort.cpp
+)
 target_link_libraries(navx_node ${catkin_LIBRARIES})

@@ -5,8 +5,10 @@
 int main(int argc, char** argv){
 	ros::init(argc, argv, "test");
 	ros::NodeHandle nh;
-	ros::Publisher pub = nh.advertise<std_msgs::Float32>("test", 1000);
-	ros::Rate period(10);
+	ros::Publisher pub = nh.advertise<std_msgs::Float32>("test", 10);
+	ros::Rate period(100);
+
+	AHRS com = AHRS("/dev/ttyACM0");
 
 	while(ros::ok()){
 		std_msgs::Float32 msg;		
